@@ -16,21 +16,16 @@ select total from invoice
 order by total desc
 limit 3;
 
-/*Q4.Which city has the best customers? We would like
-to throw a promotional Music Festival in the city we
-made the most money. Write a query that returns one
-city that has the highest sum of invoice totals. 
-Return both the city name & sum of all invoice totals.*/
+/*Q4.Which city has the best customers? We would like to throw a promotional Music Festival in the city we
+made the most money. Write a query that returns one city that has the highest sum of invoice totals.Return both the city name & sum of all invoice totals.*/
 select billing_city,round(sum(total),2) as total
 from invoice
 group by billing_city
 order by total desc
 limit 1;
 
-/*Who is the best customer? The customer who has spent 
-the most money will be declared the best customer. 
-Write a query that returns the person who has spent 
-the most money.*/
+/*Who is the best customer? The customer who has spent the most money will be declared the best customer.
+Write a query that returns the person who has spent the most money.*/
 select c.first_name,c.last_name,c.customer_id,sum(i.total) as total_spend 
 from customer c
 join invoice i
@@ -39,8 +34,7 @@ group by c.first_name,c.last_name,c.customer_id
 order by total_spend desc;
 
 #---Question Set-2:---MODERATE LEVEL
-/*Q1: Write query to return the email, first name,
-last name, & Genre of all Rock Music listeners.
+/*Q1: Write query to return the email, first name,last name, & Genre of all Rock Music listeners.
 Return your list ordered alphabetically by email starting with A*/
 SELECT DISTINCT
     c.email,
@@ -59,10 +53,8 @@ JOIN genre g
 WHERE g.name = 'Rock'
 ORDER BY c.email;
 
-/*Q2: Let's invite the artists who have written 
-the most rock music in our dataset. Write a query 
-that returns the Artist name and total track count 
-of the top 10 rock bands.*/
+/*Q2: Let's invite the artists who have written the most rock music in our dataset. Write a query 
+that returns the Artist name and total track count of the top 10 rock bands.*/
 
 SELECT 
     a.artist_id,
@@ -80,11 +72,8 @@ GROUP BY a.artist_id, a.name
 ORDER BY track_count DESC
 LIMIT 10;
  
-/*Q3.Return all the track names that have a song 
-length longer than the average song length.
-Return the Name and Milliseconds for each track.
-Order by the song length with the longest songs 
-listed first.*/
+/*Q3.Return all the track names that have a song length longer than the average song length.
+Return the Name and Milliseconds for each track.Order by the song length with the longest songs listed first.*/
 select name ,milliseconds from track
 where milliseconds > (
 select avg(milliseconds) from track)
@@ -92,9 +81,8 @@ order by milliseconds desc
 ;
 
 #---Question Set-3:---ADVANCE LEVEL
-/*Q1.Find how much amount spent by each customer
- on artists? Write a query to return customer
- name, artist name and total spent.*/
+/*Q1.Find how much amount spent by each customer on artists? Write a query to return customername, artist name 
+and total spent.*/
 select first_name,last_name,artist_name,sum(unit_price*quantity) as total_spent from(
 select c.first_name as first_name,c.last_name as last_name,
 a.name as artist_name,il.unit_price,il.quantity from customer c
@@ -154,9 +142,8 @@ WHERE ar.rnk = 1
 GROUP BY c.customer_id,c.first_name,c.last_name,ar.artist_name
 ORDER BY total_spent DESC;
 
-/*Q2.We want to find out the most popular music Genre for each country.
-We determine the most popular genre as the genre with the highest amount
-of purchases. Write a query that returns each country along with the top Genre.
+/*Q2.We want to find out the most popular music Genre for each country.We determine the most popular genre as the 
+genre with the highest amount of purchases. Write a query that returns each country along with the top Genre.
 For countries where the maximum number of purchases is shared return all Genres.*/
 #customer->invoice->invoice_line->track->genre
 
@@ -184,5 +171,3 @@ group by c.customer_id,c.first_name,c.last_name,c.country)t
 where rnk=1
 order by country desc
 ;
-
-
