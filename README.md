@@ -68,12 +68,72 @@ The Chinook database contains 11 tables:
 3. Advance Level:
 <img width="469" height="176" alt="image" src="https://github.com/user-attachments/assets/b96e34ff-fdfd-44ae-a206-6a9027e1208e" />
 
-# Insights
+# Insights & Recommendations
 
--tomorrow
+1. Revenue Growth:
 
-# Recommendations
+• Focus on USA Market: Since USA generates the highest number of invoices (131 invoices), Chinook should run targeted promotions and loyalty programs in this region.
 
--tomorrow
+<img width="275" height="164" alt="image" src="https://github.com/user-attachments/assets/87290436-1b3c-431d-ac11-ab9b99bf2237" />
 
+• Target High Revenue Cities: Prague generates the highest revenue ($273.24), so marketing campaigns and exclusive offers should be focused there.
 
+• Increase High Value Purchases: Since the highest invoice is only $23.76, bundle offers and album packages could increase transaction values.
+
+2. Customer Strategy
+
+• Retain Top Customers: František Wichterlová spent the highest ($144.54), so Chinook should introduce VIP benefits, early releases, and loyalty rewards.
+
+<img width="275" height="80" alt="image" src="https://github.com/user-attachments/assets/231e1bff-18b3-4794-911e-f2d3520b17d4" />
+
+• Country-wise Customer Retention: Top customers like Luís Gonçalves ($108.90) and François Tremblay ($99.99) should receive personalized offers.
+
+• Reduce Customer Concentration Risk: Since revenue is dependent on a small number of customers, Chinook should focus on growing mid-tier customers.
+
+3. Product & Music Strategy
+
+• Promote Rock Genre: Since Rock is the most purchased genre (example: 561 purchases in USA), Chinook should:
+
+Expand Rock catalog
+
+Promote Rock playlists
+
+Recommend Rock artists
+
+• Promote Best Selling Artists: Since Iron Maiden generated about $138.60, Chinook should feature top artists on homepage recommendations.
+
+<img width="362" height="221" alt="image" src="https://github.com/user-attachments/assets/df28ce32-27db-4ecc-995c-58ebe69511ae" />
+
+4. Marketing Channel
+
+• Genre Based Recommendations: Since customers repeatedly purchase similar genres, Chinook should implement recommendation systems.
+
+• Email Marketing: Send genre-based offers to Rock listeners.
+
+• Artist Promotion Campaigns: Promote top 10 artists with highest track counts.
+
+5. Customer Behavior
+
+• Increase Repeat Purchases:Since customers with multiple invoices generate more revenue, Chinook should:
+
+a. Offer repeat purchase discounts
+
+b. Provide loyalty points
+
+c. Offer subscription models
+
+• Geographic Targeting:Since USA, Canada, and Brazil are top markets, Chinook should prioritize marketing spend there.
+
+# Strategic Recommendation
+
+Based on the analysis, Chinook should focus on:
+
+• Customer retention (top 10 customers)
+
+• Genre expansion (Rock music)
+
+• Geographic targeting (USA market)
+
+• Artist promotion (top revenue artists)
+
+This will help increase customer lifetime value and overall revenue growth.
